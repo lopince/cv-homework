@@ -1,6 +1,11 @@
-#include <iostream>
+# include "ImgUtils.h"
 
 int main() {
-    std::cout << "Hello, Worlsd!" << std::endl;
+
+    ImgUtils imgUtils;
+
+
     return 0;
 }
+
+

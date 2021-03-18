@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/workspace/cv-homework/cv1/Ex1.1/cv_img.cpp">
+			<Option target="Ex1_1"/>
+		</Unit>
+		<Unit filename="E:/workspace/cv-homework/cv1/Ex1.1/cv_img.h">
+			<Option target="Ex1_1"/>
+		</Unit>
 		<Unit filename="E:/workspace/cv-homework/cv1/Ex1.1/main.cpp">
 			<Option target="Ex1_1"/>
 		</Unit>

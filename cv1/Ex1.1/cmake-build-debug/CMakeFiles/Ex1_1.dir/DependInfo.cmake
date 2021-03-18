@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "E:/workspace/cv-homework/cv1/Ex1.1/cv_img.cpp" "E:/workspace/cv-homework/cv1/Ex1.1/cmake-build-debug/CMakeFiles/Ex1_1.dir/cv_img.cpp.obj"
   "E:/workspace/cv-homework/cv1/Ex1.1/main.cpp" "E:/workspace/cv-homework/cv1/Ex1.1/cmake-build-debug/CMakeFiles/Ex1_1.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
