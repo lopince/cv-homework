@@ -19,23 +19,61 @@ public:
 
     CImg<unsigned char> load(const char *path);
 
+    CImg<unsigned char> getDefault(){
+
+        CImg<unsigned char> img(400, 400, 1, 3);
+        return img;
+    }
+
     void display(CImg<unsigned char>& img);
 
-    void drawCircle(CImg<unsigned char>& img);
+    void draw_triangle(CImg<unsigned char> &img,
+                       int cenX,
+                       int cenY,
+                       int len,
+                       unsigned char color[]);
 
-    void drawCircleUsingCImg(CImg<unsigned char>& img);
+    void _draw_triangle(CImg<unsigned char> &img,
+                       int cenX,
+                       int cenY,
+                       int len,
+                       unsigned char color[]);
 
-    void drawTriangle(CImg<unsigned char>& img);
+    void draw_circle(CImg<unsigned char>& img,
+                    int cenX,
+                    int cenY,
+                    int r,
+                    unsigned char color[]);
 
-    void drawTriangleUsingCImg(CImg<unsigned char>& img);
+    void _draw_circle(CImg<unsigned char>& img, int cenX, int cenY, int r, unsigned char color[]);
 
-    void drawLine(CImg<unsigned char>& img);
 
-    void drawLineUsingCImg(CImg<unsigned char>& img);
+    void draw_line(CImg<unsigned char>& img,
+                   int x0,
+                   int y0,
+                   int len,
+                   int degree,
+                   unsigned char color[]);
 
-    void rotate(CImg<unsigned char>& img);
+    void _draw_line(CImg<unsigned char>& img,
+                    int x0,
+                    int y0,
+                    int len,
+                    int degree,
+                    unsigned char color[]);
 
-    void rotateUsingCImg(CImg<unsigned char>& img);
+
+
+
+    void rotate(CImg<unsigned char>& img,
+                int degree,
+                int x0,
+                int y0);
+
+    void _rotate(CImg<unsigned char>& img,
+                int degree,
+                int x0,
+                int y0);
 
     void save(const char *path);
 

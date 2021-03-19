@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ex1_1.dir/cv_img.cpp.obj"
+  "CMakeFiles/Ex1_1.dir/ImgUtils.cpp.obj"
   "CMakeFiles/Ex1_1.dir/main.cpp.obj"
   "Ex1_1.exe"
   "Ex1_1.exe.manifest"

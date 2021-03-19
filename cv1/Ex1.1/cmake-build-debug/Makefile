@@ -142,32 +142,32 @@ Ex1_1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex1_1.dir\build.make CMakeFiles/Ex1_1.dir/build
 .PHONY : Ex1_1/fast
 
-cv_img.obj: cv_img.cpp.obj
+ImgUtils.obj: ImgUtils.cpp.obj
 
-.PHONY : cv_img.obj
+.PHONY : ImgUtils.obj
 
 # target to build an object file
-cv_img.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex1_1.dir\build.make CMakeFiles/Ex1_1.dir/cv_img.cpp.obj
-.PHONY : cv_img.cpp.obj
+ImgUtils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex1_1.dir\build.make CMakeFiles/Ex1_1.dir/ImgUtils.cpp.obj
+.PHONY : ImgUtils.cpp.obj
 
-cv_img.i: cv_img.cpp.i
+ImgUtils.i: ImgUtils.cpp.i
 
-.PHONY : cv_img.i
+.PHONY : ImgUtils.i
 
 # target to preprocess a source file
-cv_img.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex1_1.dir\build.make CMakeFiles/Ex1_1.dir/cv_img.cpp.i
-.PHONY : cv_img.cpp.i
+ImgUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex1_1.dir\build.make CMakeFiles/Ex1_1.dir/ImgUtils.cpp.i
+.PHONY : ImgUtils.cpp.i
 
-cv_img.s: cv_img.cpp.s
+ImgUtils.s: ImgUtils.cpp.s
 
-.PHONY : cv_img.s
+.PHONY : ImgUtils.s
 
 # target to generate assembly for a file
-cv_img.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex1_1.dir\build.make CMakeFiles/Ex1_1.dir/cv_img.cpp.s
-.PHONY : cv_img.cpp.s
+ImgUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ex1_1.dir\build.make CMakeFiles/Ex1_1.dir/ImgUtils.cpp.s
+.PHONY : ImgUtils.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -205,9 +205,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Ex1_1
-	@echo ... cv_img.obj
-	@echo ... cv_img.i
-	@echo ... cv_img.s
+	@echo ... ImgUtils.obj
+	@echo ... ImgUtils.i
+	@echo ... ImgUtils.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -114,11 +114,15 @@ E:/workspace/cv-homework/cv1/Ex1.1/tinyexr.h
 CImg.h
 E:/workspace/cv-homework/cv1/Ex1.1/CImg.h
 
-E:/workspace/cv-homework/cv1/Ex1.1/main.cpp
+E:/workspace/cv-homework/cv1/Ex1.1/ImgUtils.cpp
+ImgUtils.h
+E:/workspace/cv-homework/cv1/Ex1.1/ImgUtils.h
+
+E:/workspace/cv-homework/cv1/Ex1.1/ImgUtils.h
 iostream
--
-math.h
-E:/workspace/cv-homework/cv1/Ex1.1/math.h
+E:/workspace/cv-homework/cv1/Ex1.1/iostream
+cmath
+E:/workspace/cv-homework/cv1/Ex1.1/cmath
 CImg.h
 E:/workspace/cv-homework/cv1/Ex1.1/CImg.h
 
