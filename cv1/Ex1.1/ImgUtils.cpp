@@ -34,11 +34,11 @@ void ImgUtils::draw_triangle(CImg<unsigned char> &img,
     double k01 = (Ay - By) / (Ax - Bx);
     double k02 = (Ay - Cy) / (Ax - Cx);
     cimg_forXY(img, x, y) {
-            // range of the triangle pixels
+            // 根据三角形三个顶点的坐标，以及斜率，约束三角形坐标范围
             if (Bx <= x && x < Cx && Ay <= y && y <= By) {
                 double kx1 = (y - By) / (x - Bx);
                 double kx2 = (y - Cy) / (x - Cx);
-                // fill color
+                // 填充颜色
                 if (kx1 >= k01 && kx2 <= k02) {
                     img(x, y, 0) = color[0];
                     img(x, y, 1) = color[1];
@@ -73,6 +73,7 @@ void ImgUtils::draw_circle(CImg<unsigned char> &img,
                            unsigned char color[]) {
 
     cimg_forXY(img, x, y) {
+            // 基于圆的方程(x-a)^2 + (y-b)^2 = r^2，约束圆的坐标
             if (pow((cenX - x), 2) + pow((cenY - y), 2) <= pow(r, 2)) {
                 img(x, y, 0) = color[0];
                 img(x, y, 1) = color[1];
@@ -141,7 +142,6 @@ void ImgUtils::rotate(CImg<unsigned char> &img,
     double w0 = img.width();
     double h0 = img.height();
 
-
     double w = w0 * cosA + h0 * sinA;
     double h = h0;
     if (w0 == h0) {
@@ -169,11 +169,11 @@ void ImgUtils::rotate(CImg<unsigned char> &img,
                 int dX = aX + 1;
                 int dY = aY + 1;
 
-                // distance to point A
+                // 坐标到A点的距离
                 double p = x0 - aX;
                 double q = y0 - aY;
 
-                // interpolation
+                // 插值法
                 newImg(x, y, 0) = interpolation(img(aX, aY, 0), img(bX, bY, 0), img(cX, cY, 0), img(dX, dY, 0), p, q);
                 newImg(x, y, 1) = interpolation(img(aX, aY, 1), img(bX, bY, 1), img(cX, cY, 1), img(dX, dY, 1), p, q);
                 newImg(x, y, 2) = interpolation(img(aX, aY, 2), img(bX, bY, 2), img(cX, cY, 2), img(dX, dY, 2), p, q);
