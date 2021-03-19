@@ -118,7 +118,7 @@ void ImgUtils::_draw_line(CImg<unsigned char> &img,
                           int len,
                           int degree,
                           unsigned char color[]) {
-    img.draw_line(x0,  y0, len, degree, color);
+    img.draw_line(x0, y0, len, degree, color);
 }
 
 double interpolation(int valueA,
@@ -183,8 +183,13 @@ void ImgUtils::rotate(CImg<unsigned char> &img,
 }
 
 void ImgUtils::_rotate(CImg<unsigned char> &img,
-                      int degree,
-                      int x0,
-                      int y0) {
+                       int degree,
+                       int x0,
+                       int y0) {
     img.rotate(degree, x0, y0);
+}
+
+void ImgUtils::save(CImg<unsigned char> &img,
+                    const char *path) {
+    img.save(path);
 }

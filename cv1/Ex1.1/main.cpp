@@ -29,10 +29,13 @@ int main() {
     imgUtils.draw_line(_img, 0, 0, 100, 45, green);
 
     // 5. 用 C++的写图像旋转函数(不调用其他的图像处理库函数), 把第四步的结果图像, 绕坐标(50,50)顺时针旋转 25 和 45 度。
-    imgUtils.rotate(img, 25, 50, 50);
+    imgUtils.rotate(img, 45, 50, 50);
 //    imgUtils.rotate(img, 45, 50, 50);
     imgUtils._rotate(_img, 25, 50, 50);
 //    imgUtils._rotate(_img, 45, 50, 50);
+
+    // 6. 把上面的操作结果保存为 2.bmp
+    imgUtils.save(img, "e:\\workspace\\cv-homework\\cv1\\Ex1.1\\2.bmp");
 
     imgUtils.display(img);
     imgUtils.display(_img);

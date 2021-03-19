@@ -75,7 +75,8 @@ public:
                 int x0,
                 int y0);
 
-    void save(const char *path);
+    void save(CImg<unsigned char> &img,
+              const char *path);
 
 };
 
