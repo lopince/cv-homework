@@ -1,3 +1,1 @@
-"D:\Program Files (x86)\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Ex1_1.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Ex1_1.dir/objects.a @CMakeFiles\Ex1_1.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Ex1_1.dir/objects.a -Wl,--no-whole-archive  -o Ex1_1.exe -Wl,--out-implib,libEx1_1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Ex1_1.dir\linklibs.rsp
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Ex1_1.dir/main.cpp.o CMakeFiles/Ex1_1.dir/ImgUtils.cpp.o  -o Ex1_1 

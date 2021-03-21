@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Ex1_1.dir/ImgUtils.cpp.obj"
-  "CMakeFiles/Ex1_1.dir/main.cpp.obj"
-  "Ex1_1.exe"
-  "Ex1_1.exe.manifest"
+  "CMakeFiles/Ex1_1.dir/ImgUtils.cpp.o"
+  "CMakeFiles/Ex1_1.dir/main.cpp.o"
+  "Ex1_1"
   "Ex1_1.pdb"
-  "libEx1_1.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

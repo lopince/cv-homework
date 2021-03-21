@@ -1,3 +1,3 @@
-E:/workspace/cv-homework/cv1/Ex1.1/cmake-build-debug/CMakeFiles/Ex1_1.dir
-E:/workspace/cv-homework/cv1/Ex1.1/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/workspace/cv-homework/cv1/Ex1.1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/lopince/workspace/c++s/cv-homework/cv1/Ex1.1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/lopince/workspace/c++s/cv-homework/cv1/Ex1.1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lopince/workspace/c++s/cv-homework/cv1/Ex1.1/cmake-build-debug/CMakeFiles/Ex1_1.dir

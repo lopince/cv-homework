@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Ex1_2.dir/main.cpp.o CMakeFiles/Ex1_2.dir/canny.cpp.o  -o Ex1_2   -L/opt/X11/lib  -Wl,-rpath,/opt/X11/lib -lX11 
