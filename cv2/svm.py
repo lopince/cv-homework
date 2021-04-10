@@ -35,4 +35,4 @@ params['C'] = [1]
 start_time = time()
 gs = GridSearchCV(svc, params, n_jobs=-1)
 gs.fit(train_images, train_labels)
-print('trained, time consuming: {}s'.format(time()-start_time))
+print('trained, time consuming: {}s'.format(time() - start_time))
