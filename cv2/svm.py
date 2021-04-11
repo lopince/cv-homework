@@ -5,7 +5,7 @@ from time import time
 from struct import unpack
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
-
+from sklearn.metrics import accuracy_score
 
 def load_images(path):
     with open(path, 'rb') as f:
@@ -20,7 +20,6 @@ def load_labels(path):
         lab = np.fromfile(f, dtype=np.uint8)
     return lab
 
-
 train_images = load_images('./train-images-idx3-ubyte')
 train_labels = load_labels('./train-labels-idx1-ubyte')
 
@@ -32,7 +31,11 @@ params = {}
 params['kernel'] = ['rbf']
 params['C'] = [1]
 
+print ('training') 
 start_time = time()
 gs = GridSearchCV(svc, params, n_jobs=-1)
 gs.fit(train_images, train_labels)
 print('trained, time consuming: {}s'.format(time() - start_time))
+
+ret = gs.predict(test_images)
+print('accuracy: {}'.format(accuracy_score(ret, test_labels)))
