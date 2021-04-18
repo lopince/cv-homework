@@ -1,12 +1,17 @@
 import cv2
+import os
 
 
-def read(path):
-    return cv2.imread(path)
+dir = os.getcwd() + '/ex4/'
+
+
+def read(filename):
+    print('reading: ', dir + filename)
+    return cv2.imread(dir + filename)
 
 
 def write(filename, img):
-    cv2.imwrite(filename, img)
+    cv2.imwrite(dir + filename, img)
 
 
 def display(img):

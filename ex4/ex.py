@@ -1,11 +1,10 @@
 import binarizes
 import imgs
-import os
+import morphologys
 
 
 # 读取图片
-path = os.getcwd() + '/ex4/test.jpg'
-img = imgs.read(path)
+img = imgs.read('test.jpg')
 
 # 转化为灰度图
 grey_img = imgs.toGreyImg(img)
@@ -41,3 +40,23 @@ imgs.write('trunc_binary.jpg', trunc_binary_img)
 thr, to_zero_binary_img = binarizes.tozero(grey_img)
 print('to zero binary threshold:', thr)
 imgs.write('to_zero_binary.jpg', to_zero_binary_img)
+
+# 腐蚀
+erosion_img = morphologys.erosion(img)
+imgs.write('enosion.jpg', erosion_img)
+
+# 膨胀
+dilation_img = morphologys.dilation(img)
+imgs.write('dilation.jpg', dilation_img)
+
+# 闭运算
+morph_close_img = morphologys.morph_close(img)
+imgs.write('morph_close.jpg', morph_close_img)
+
+# 开运算
+morph_open_img = morphologys.morph_open(img)
+imgs.write('morph_open.jpg', morph_open_img)
+
+# 细化
+thinning_img = morphologys.thinning(binary_img)
+imgs.write('thinning.jpg', thinning_img)
