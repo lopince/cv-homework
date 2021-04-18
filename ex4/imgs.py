@@ -9,5 +9,9 @@ def write(filename, img):
     cv2.imwrite(filename, img)
 
 
+def display(img):
+    cv2.imshow(img)
+
+
 def toGreyImg(img):
     return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)

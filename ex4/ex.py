@@ -1,9 +1,11 @@
-import imgs
 import binarizes
+import imgs
+import os
 
 
 # 读取图片
-img = imgs.read('test.jpg')
+path = os.getcwd() + '/ex4/test.jpg'
+img = imgs.read(path)
 
 # 转化为灰度图
 grey_img = imgs.toGreyImg(img)
@@ -11,11 +13,31 @@ grey_img = imgs.toGreyImg(img)
 # 二值化
 
 # 大津法—最大类间方差法
-thr, binary = binarizes.ostu(grey_img)
+thr, ostu_binary_img = binarizes.ostu(grey_img)
 print('ostu threshold:', thr)
+imgs.write("ostu_binary.jpg", ostu_binary_img)
 
 # triangle
-thr, binary = binarizes.triangle(grey_img)
+thr, triangle_binary_img = binarizes.triangle(grey_img)
 print('triangle threshold:', thr)
+imgs.write('triangle_binary.jpg', triangle_binary_img)
 
+# binary
+thr, binary_img = binarizes.binary(grey_img)
+print('binary threshold:', thr)
+imgs.write('binary.jpg', binary_img)
 
+# binary inv
+thr, binary_inv_img = binarizes.binary_inv(grey_img)
+print('binary inv threshold:', thr)
+imgs.write('binary_inv.jpg', binary_inv_img)
+
+# trunc
+thr, trunc_binary_img = binarizes.trunc(grey_img)
+print('trunc binary threshold:', thr)
+imgs.write('trunc_binary.jpg', trunc_binary_img)
+
+# to zero
+thr, to_zero_binary_img = binarizes.tozero(grey_img)
+print('to zero binary threshold:', thr)
+imgs.write('to_zero_binary.jpg', to_zero_binary_img)
