@@ -58,5 +58,20 @@ morph_open_img = morphologys.morph_open(img)
 imgs.write('morph_open.jpg', morph_open_img)
 
 # 细化
-# thinning_img = morphologys.thinning(binary_img)
-# imgs.write('thinning.jpg', thinning_img)
+# ostu_binary_thinning_img = morphologys.thinning(ostu_binary_img)
+# imgs.write('ostu_binary_thinning.jpg', ostu_binary_thinning_img)
+
+# triangle_binary_thinning_img = morphologys.thinning(triangle_binary_img)
+# imgs.write('triangle_binary_thinning.jpg', triangle_binary_thinning_img)
+
+# binary_thinning_img = morphologys.thinning(binary_img)
+# imgs.write('binary_thinning.jpg', binary_thinning_img)
+
+# binary_inv_thinning_img = morphologys.thinning(binary_inv_img)
+# imgs.write('binary_inv_thinning.jpg', binary_inv_thinning_img)
+
+trunc_binary_img = morphologys.thinning(trunc_binary_img)
+imgs.write('trunc_binary_thinning.jpg', trunc_binary_img)
+
+# to_zero_binary_img = morphologys.thinning(to_zero_binary_img)
+# imgs.write('to_zero_binary_thinning.jpg', to_zero_binary_img)
