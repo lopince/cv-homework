@@ -2,4 +2,4 @@ ex4/.vscode/settings.json
 */settings.json
 ex4/__pycache__/*.pyc
 .vscode/settings.json
- 
+ ex4/res/*.jpg

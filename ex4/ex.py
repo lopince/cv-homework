@@ -58,5 +58,5 @@ morph_open_img = morphologys.morph_open(img)
 imgs.write('morph_open.jpg', morph_open_img)
 
 # 细化
-thinning_img = morphologys.thinning(binary_img)
-imgs.write('thinning.jpg', thinning_img)
+# thinning_img = morphologys.thinning(binary_img)
+# imgs.write('thinning.jpg', thinning_img)
