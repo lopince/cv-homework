@@ -84,7 +84,6 @@ def horizontal_thin(img, array):
 
 def thinning(img, iteration=10):
     for i in range(iteration):
-        print('thinning, iter:{}'.format(i))
         vertical_thin(img, thin_map)
         horizontal_thin(img, thin_map)
     return img
