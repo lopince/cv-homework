@@ -1,5 +1,8 @@
 import cv2
 import os
+import numpy
+
+from PIL import Image
 
 
 read_dir = os.getcwd() + '/'
@@ -27,3 +30,11 @@ def display(img):
 
 def to_grey_img(img):
     return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+
+def to_array(img):
+    return numpy.array(img)
+
+
+def from_array(arr):
+    return Image.fromarray(arr)

@@ -1,10 +1,8 @@
 import numpy as np
 
-from PIL import Image
-
 
 def median(img, k=3):
-
+    """中值滤波"""
     img_arr = np.array(img)
     h, w = img_arr.shape
 
@@ -24,4 +22,4 @@ def median(img, k=3):
                 else:
                     temp_arr[i, j] = img_arr[i, j]
 
-    return Image.fromarray(temp_arr)
+    return np.asarray(temp_arr)
