@@ -7,7 +7,7 @@ import morphologys
 img = imgs.read('test.jpg')
 
 # 转化为灰度图
-grey_img = imgs.toGreyImg(img)
+grey_img = imgs.to_grey_img(img)
 
 # 二值化
 
