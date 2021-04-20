@@ -34,5 +34,14 @@ print(type(noised_img))
 imgs.write('noised.jpg', noised_img)
 
 # 使用中值滤波方法进行降噪
-median_filtered_img = filters.median(noised_img)
-imgs.write('median_filtered.jpg', median_filtered_img)
+median_filtered_img = filters.median(noised_img, k=3)
+imgs.write('median_3_filtered.jpg', median_filtered_img)
+
+median_filtered_img = filters.median(noised_img, k=5)
+imgs.write('median_5_filtered.jpg', median_filtered_img)
+
+median_filtered_img = filters.median(noised_img, k=10)
+imgs.write('median_10_filtered.jpg', median_filtered_img)
+
+median_filtered_img = filters.median(noised_img, k=20)
+imgs.write('median_20_filtered.jpg', median_filtered_img)
