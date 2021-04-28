@@ -1,4 +1,3 @@
-import os
 import numpy as np
 
 from time import time
@@ -6,6 +5,7 @@ from struct import unpack
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import accuracy_score
+
 
 def load_images(path):
     with open(path, 'rb') as f:
@@ -20,6 +20,7 @@ def load_labels(path):
         lab = np.fromfile(f, dtype=np.uint8)
     return lab
 
+
 train_images = load_images('./train-images-idx3-ubyte')
 train_labels = load_labels('./train-labels-idx1-ubyte')
 
@@ -28,14 +29,22 @@ test_labels = load_labels('./t10k-labels-idx1-ubyte')
 
 svc = SVC()
 params = {}
-params['kernel'] = ['rbf']
-params['C'] = [1]
+# gamma: auto, scale
+params['gamma'] = ['scale']
 
-print ('training') 
+# kernel: liner, rbf
+params['kernel'] = ['rbf']
+
+# 
+params['C'] = [1.0]
+
+print('training svm, params={}'.format(params)) 
 start_time = time()
 gs = GridSearchCV(svc, params, n_jobs=-1)
 gs.fit(train_images, train_labels)
-print('trained, time consuming: {}s'.format(time() - start_time))
+print('trained, time consuming={}s'.format(time() - start_time))
 
-ret = gs.predict(test_images)
-print('accuracy: {}'.format(accuracy_score(ret, test_labels)))
+pred = gs.predict(test_images)
+print('accuracy={}'.format(accuracy_score(pred, test_labels)))
+
+
